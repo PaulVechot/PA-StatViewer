@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title></title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../common/dashboard.css" rel="stylesheet">
+
+        <link rel="icon" type="image/png" href="/app/common/logo.png">
+    </head>
+
+    <body>
+        <sv-navbar></sv-navbar>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="home"></span>
+                                    Dashboard<span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span data-feather="file"></span>
+                                    Stats list
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                    <sv-stats></sv-stats>
+                </main>
+            </div>
+        </div>
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="../../vendor/jquery/jquery-3.3.1.js"></script>
+        <script src="../../vendor/popper/popper.min.js"></script>
+        <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Riot tags -->
+        <script src="../navbar/sv-navbar.tag" type="riot/tag"></script>
+        <script src="sv-stats.tag" type="riot/tag"></script>
+        <script src="sv-stat-display.tag" type="riot/tag"></script>
+        <script src="sv-stat-table.tag" type="riot/tag"></script>
+        <script src="sv-stat-linechart.tag" type="riot/tag"></script>
+        <script src="../../vendor/riot/riot+compiler.js"></script>
+        <script>riot.mount('sv-navbar');</script>
+
+        <!-- Graphs -->
+        <script src="../../vendor/chart/Chart.js"></script>
+
+        <!-- Controller dependencies -->
+        <script src="../web-service/web-service.js"></script>
+
+        <!-- Controller -->
+        <script src="stats.js"></script>
+
+        <!-- Icons -->
+        <script src="../../vendor/feather/feather.min.js"></script>
+        <script>
+            feather.replace()
+        </script>
+    </body>
+</html>
