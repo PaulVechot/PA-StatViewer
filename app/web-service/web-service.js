@@ -48,7 +48,7 @@ class WebService {
      * @param {string} callback - The callback to call on success
      */
     fetchResults (jwt, callback) {
-        $.get('/web-service/results', { jwt: jwt }, callback);
+        $.get('/web-service/analysis_result/', { jwt: jwt }, callback);
     }
 
     /**
@@ -58,6 +58,6 @@ class WebService {
      * @param {string} callback - The callback to call on success
      */
     fetchStats (jwt, resultId, callback) {
-        $.get('/web-service/results/' + resultId, { jwt: jwt }, callback);
+        $.get('/web-service/analysis_result/' + resultId, { jwt: jwt }, callback);
     }
 }
